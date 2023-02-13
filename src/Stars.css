@@ -1,0 +1,61 @@
+@keyframes starSparkle {
+    0%      { transform: translateX(0px);
+              transform: translateY(0px);   
+              opacity: 0%;                  }
+
+    5%      { opacity: 100%;}
+    25%     { transform: translateY(2px);   }
+
+    50%     { transform: translateY(2px);
+              transform: translateX(4px);   }
+    
+    95%     { transform: translateX(-2px);
+              opacity: 100%;                }
+    100%    { transform: translateY(1px);
+              transform: translateX(-3px);  
+              opacity: 0%;                  }
+}
+
+
+@keyframes lightspeedQ1 {
+    from {  opacity: 1;
+            transform: translateX(0px);
+            transform: translateY(0px); }
+    to   {  opacity: 0;
+            transform: translateX(-2in);
+            transform: translateY(+2in); }
+}
+@keyframes lightspeedQ2 {
+    from {  opacity: 1;
+            transform: translateX(0px);
+            transform: translateY(0px); }
+    to   {  opacity: 0;
+            transform: translateX(+2in);
+            transform: translateY(+2in); }
+}
+@keyframes lightspeedQ3 {
+    from {  opacity: 1;
+            transform: translateX(0px);
+            transform: translateY(0px); }
+    to   {  opacity: 0;
+            transform: translateX(-2in);
+            transform: translateY(-2in); }
+}
+@keyframes lightspeedQ4 {
+    from {  opacity: 1;
+            transform: translateX(0px);
+            transform: translateY(0px); }
+    to   {  opacity: 0;
+            transform: translateX(+2in);
+            transform: translateY(-2in); }
+}
+
+.lightspeed {
+    animation-duration: 1s;
+    animation-name: none;
+    animation-iteration-count: infinite;
+}
+
+.twinkle-animation {
+    animation: starSparkle 5s ease-in-out infinite;
+}

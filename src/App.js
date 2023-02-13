@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'; 
+import "./Stars.css";
+import React, {useState, useEffect} from 'react';
+import CreateStars from './Stars';
+import HomePage from './HomePage';
+
+
+export const fadeOut = (element) => {
+  element.current.style.opacity = 1;
+  
+  setTimeout(() => {
+    element.current.style.transition = "opacity 2s ease-out";
+    element.current.style.opacity = 0;
+  }, 500);
+};
+
 
 function App() {
+  const [stars, setStars] = useState([]);
+
+  useEffect(() => {
+    setStars(CreateStars(150));
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {stars}
+      <HomePage />
+    </>
   );
-}
+};
+//Make the stars go light speed when button is clicked.
+//Label what the balls is going on
+//Stupid... >:(
 
 export default App;
